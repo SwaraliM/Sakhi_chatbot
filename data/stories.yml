@@ -1,0 +1,81 @@
+version: "3.1"
+
+stories:
+
+- story: User Shares Experience
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: share_experience
+  - action: utter_sentimental_response
+  - intent: affirm
+  - action: utter_ask_for_details
+  - action: incident_form
+  - active_loop: incident_form
+  - slot_was_set:
+    - requested_slot: date
+  - slot_was_set:
+    - requested_slot: time
+  - slot_was_set:
+    - requested_slot: location
+  - slot_was_set:
+    - requested_slot: perpetrator_name
+  - slot_was_set:
+    - requested_slot: perpetrator_relation
+
+  # - action: action_display_details
+  # - intent: affirm
+  # - action: utter_legal_advice
+
+- story: Requesting POSH Act Information
+  steps:
+  - intent: posh_act_information
+  - action: utter_posh_act_information
+
+- story: Seeking Legal Advice
+  steps:
+  - intent: legal_advice
+  - action: utter_legal_advice
+
+- story: Exploring Support Services
+  steps:
+  - intent: support_services
+  - action: utter_support_services
+
+- story: Requesting HR Contact Information
+  steps:
+  - intent: contact_hr
+  - action: utter_contact_hr
+
+- story: Emergency Assistance
+  steps:
+  - intent: emergency_help
+  - action: utter_emergency_help
+
+- story: Gratitude and Farewell
+  steps:
+  - intent: thank_you
+  - action: utter_thank_you
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: Seeking Clarification
+  steps:
+  - intent: clarify
+  - action: utter_fallback
+
+- story: Unrecognized Input
+  steps:
+  - intent: fallback
+  - action: utter_fallback
+
+
+
+
+
+
+
+
+
+
+

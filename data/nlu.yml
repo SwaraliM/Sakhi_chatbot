@@ -1,0 +1,203 @@
+version: "3.1"
+
+nlu:
+
+- intent: posh_act_information
+  examples: |
+    - Tell me about the POSH Act of 2013.
+    - What does the POSH Act say about workplace harassment?
+    - Explain the provisions of the POSH Act.
+
+- intent: legal_advice
+  examples: |
+    - Do I need legal advice regarding harassment?
+    - Can you connect me with a lawyer for legal guidance?
+    - I need legal help with my harassment case.
+    - What are my legal rights?
+    - Tell me about workplace harassment laws.
+    - Can you provide legal information?
+
+- intent: provide_details
+  examples: |
+    - The incident happened on [2023-09-15](date) at [2:30 PM](time) in [my office](location). I was harassed by [John Doe](perpetrator_name), my [manager](perpetrator_relation).
+    - The date was [2023-09-20](date) and the time was [10:00 AM](time). [Alice Smith](perpetrator_name) was the [supervisor](perpetrator_relation) involved.
+    - The harassment occurred at [home](location) on [2023-09-25](date).
+    - [Jane Doe](perpetrator_name) is my [colleague](perpetrator_relation).
+    - [2023-09-10](date), [9:45 AM](time), [cafeteria](location), [David Johnson](perpetrator_name), [coworker](perpetrator_relation).
+
+- intent: provide_date
+  examples: |
+    - [4-10-2023](date)
+    - [4 october](date)
+    - The incident happened on [2023-09-15](date)
+    - The date is [3rd october](date)
+    - [4/10/2023](date)
+
+- intent: provide_time
+  examples: |
+    - [10 am](time)
+    - It was around [2 pm](time).
+    - It occurred around [time].
+    - The time of the incident was [time].
+    - I can provide the time, it was [time].
+
+
+- intent: provide_location
+  examples: |
+    - The incident took place at [location].
+    - It happened at [location].
+    - The location of the incident is [location].
+    - It happened in my [office](location).
+    - in [conference room of office](location).
+    - [ABC pvt Ltd](location).
+    - [location](location)
+
+
+- intent: provide_perpetrator_name
+  examples: |
+    - The person involved is [perpetrator_name].
+    - The name of the perpetrator is [perpetrator_name].
+    - [perpetrator_name] was involved.
+    - His name is [John Doe](perpetrator_name)
+    - [ABC](perpetrator_name)
+    - [Jane Doe](perpetrator_name)
+    - [perpetrator_name]
+
+- intent: provide_perpetrator_relation
+  examples: |
+    - The person is my [perpetrator_relation].
+    - [perpetrator_relation] is the relation.
+    - [perpetrator_relation] was the person responsible.
+    - He is my [collegue](perpetrator_relation)
+    - [Manager](perpetrator_relation)
+    - [supervisor](perpetrator_relation)
+
+
+    
+- intent: support_services
+  examples: |
+    - Where can I find support services for harassment victims?
+    - Tell me about organizations that help harassment victims.
+    - Provide a list of support services for workplace harassment.
+
+- intent: contact_hr
+  examples: |
+    - How do I contact my company's HR department?
+    - Give me the contact details for HR at my workplace.
+    - I need to reach out to HR about harassment.
+
+- intent: emergency_help
+  examples: |
+    - It's an emergency. What should I do?
+    - Who do I call in case of immediate danger due to harassment?
+    - Urgent assistance needed for harassment situation.
+
+- intent: thank_you
+  examples: |
+    - Thank you for your help.
+    - I appreciate your support.
+    - You've been very helpful, thanks.
+
+- intent: goodbye
+  examples: |
+    - Goodbye.
+    - See you later.
+    - Bye for now.
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: clarify
+  examples: |
+    - Can you explain that further?
+    - I didn't understand. Could you elaborate?
+    - Please clarify.
+
+- intent: fallback
+  examples: |
+    - Sorry, I'm not sure what you mean.
+    - I didn't get that. Can you rephrase?
+    - I don't understand.
+
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+
+- intent: provide_email
+  examples: |
+    - My email address is [user@example.com](email).
+    - Here is my email: [john.doe@email.com](email).
+    - Contact me at [test@example.org](email).
+    - You can reach me at [jane.smith@example.net](email).
+
+- intent: share_experience
+  examples: |
+    - I had a terrible experience.
+    - Something really bad happened.
+    - I want to talk about an incident.
+    - I dont feel good.
+    - I was harassed at work today. I want to talk about my experience.
+    - I want to report workplace harassment.
+    - How do I report sexual harassment at work?
+    - Can you guide me on reporting harassment?
+    - I want to report the incident.
+    - How can I report harassment?
+    - What should I do to report this?
+
+- intent: ngo_recommendation
+  examples: |
+    - Recommend some NGOs.
+    - NGO suggestions, please.
+    - Tell me about organizations that can help.
+
+- intent: physical_abuse
+  examples: |
+    - I was physically abused.
+    - The situation involved physical harm.
+    - I need help with a physical assault.

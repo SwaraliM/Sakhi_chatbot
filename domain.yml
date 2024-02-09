@@ -1,0 +1,141 @@
+version: "3.1"
+
+intents:
+  - greet
+  - affirm
+  - deny
+  - mood_great
+  - bot_challenge
+  - report_harassment
+  - posh_act_information
+  - legal_advice
+  - support_services
+  - contact_hr
+  - emergency_help
+  - thank_you
+  - goodbye
+  - clarify
+  - fallback
+  - provide_details
+  - provide_date
+  - provide_time
+  - provide_location
+  - provide_perpetrator_name
+  - provide_perpetrator_relation
+  - share_experience
+
+entities:
+- date
+- time
+- location
+- perpetrator_name
+- perpetrator_relation
+
+slots:
+  date:
+    type: text
+    influence_conversation: true
+    mappings: 
+    - type: from_entity
+      entity: date
+  time:
+    type: text
+    influence_conversation: true
+    mappings: 
+    - type: from_entity
+      entity: time
+  location:
+    type: text
+    influence_conversation: true
+    mappings: 
+    - type: from_entity
+      entity: location
+  perpetrator_name:
+    type: text
+    influence_conversation: true
+    mappings: 
+    - type: from_entity
+      entity: perpetrator_name
+  perpetrator_relation:
+    type: text
+    influence_conversation: true
+    mappings: 
+    - type: from_entity
+      entity: perpetrator_relation
+
+forms:
+  incident_form:
+    required_slots:
+    - date
+    - time
+    - location
+    - perpetrator_name
+    - perpetrator_relation
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_report_harassment:
+  - text: "I'm really sorry to hear that you're facing this issue. Please remember that your safety is important. You can report workplace harassment to your HR department or follow the procedures outlined in the POSH Act. Would you like more information on the POSH Act?"
+
+  utter_posh_act_information:
+  - text: "The POSH Act of 2013, also known as the Sexual Harassment of Women at Workplace (Prevention, Prohibition, and Redressal) Act, is a legal framework designed to prevent and address workplace sexual harassment. It mandates the establishment of Internal Complaints Committees (ICCs) and outlines procedures for reporting and addressing such cases."
+
+  utter_legal_advice:
+  - text: "I'm not a lawyer, but I can provide some general information.\nBased on your description, it's important to know that the POSH Act (Prevention of Sexual Harassment) provides protections against workplace harassment. You may want to consider taking the following steps:\n\n1. Document the incidents with dates, times, and details.\n2. Report the harassment to your company's HR department or the designated Internal Complaints Committee (ICC).\n3. If necessary, consult with a legal professional for guidance on further actions.\n\nWhile I can provide general information, it's advisable to consult with a legal expert for personalized legal advice regarding your harassment case. They can guide you through the legal aspects and options available to you. Remember that it's crucial to prioritize your safety and well-being."
+
+  utter_support_services:
+  - text: "There are several organizations and support services available to help victims of workplace harassment. Some notable ones include [list of organizations]. These organizations offer counseling, legal aid, and emotional support."
+
+  utter_contact_hr:
+  - text: "You can typically find your company's HR department's contact details on your organization's official website or in your employee handbook. If it's an urgent matter, consider contacting your immediate supervisor."
+
+  utter_emergency_help:
+  - text: "If you're in immediate danger or facing a crisis due to harassment, please call your local emergency services number (e.g., 100 in India. 103 - Women Helpline services.) or reach out to the nearest law enforcement agency for assistance."
+
+  utter_thank_you:
+  - text: "You're welcome! If you have any more questions or need further assistance, feel free to ask. Stay safe!"
+
+  utter_goodbye:
+  - text: "Goodbye! Take care, and remember that you can always return if you have more questions or need assistance."
+
+  utter_fallback:
+  - text: "I'm sorry, but I couldn't understand your request. Please try rephrasing or ask another question."
+
+  utter_sentimental_response:
+  - text: "I'm here to listen and support you. I'm very sorry that happened to you. Would you like to speak about it in detail?"
+
+  utter_ask_for_details:
+  - text: "Please describe your incident in detail. Take your time to remeber all the details" 
+
+  # utter_display_details:
+  # - text: "Here is what I gathered:\nDate: {date}\nTime: {time}\nLocation: {location}\nPerpetrator Name: {perpetrator_name}\nRelation of Perpetrator: {perpetrator_relation}\nDoes this look correct to you?"
+
+  utter_ask_date:
+  - text: What date did the incident take place? (dd-mm-yyyy)
+
+  utter_ask_time:
+  - text: Do you recall the time that the incident occurred?
+  
+  utter_ask_location:
+  - text: Where did the incident take place?
+
+  utter_ask_perpetrator_name:
+  - text: What is the name of the perpetrator?
+
+  utter_ask_perpetrator_relation:
+  - text: What is their position in the workplace?
+
+actions:
+- action_display_details
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
