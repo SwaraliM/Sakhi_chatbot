@@ -2,30 +2,47 @@ version: "3.1"
 
 stories:
 
-- story: User Shares Experience
+- story: User Provides Email
+  steps:
+  - intent: provide_email
+  - slot_was_set:
+    - requested_slot: email
+  - action: action_create_and_send_report
+
+- story: User Shares Description
   steps:
   - intent: greet
   - action: utter_greet
   - intent: share_experience
   - action: utter_sentimental_response
   - intent: affirm
-  - action: utter_ask_for_details
-  - action: incident_form
-  - active_loop: incident_form
+  - action: utter_ask_for_description
+  - action: description_form
+  - active_loop: description_form
   - slot_was_set:
-    - requested_slot: date
-  - slot_was_set:
-    - requested_slot: time
-  - slot_was_set:
-    - requested_slot: location
-  - slot_was_set:
-    - requested_slot: perpetrator_name
-  - slot_was_set:
-    - requested_slot: perpetrator_relation
-
-  # - action: action_display_details
+    - requested_slot: detailed_description
+  # - action: action_predict_harassment_class
+  # - action: utter_would_you_give_details
   # - intent: affirm
-  # - action: utter_legal_advice
+
+# - story: User Shares Details
+#   steps:
+#   # - action: utter_ask_for_details
+#   - action: incident_form
+#   - active_loop: incident_form
+#   - slot_was_set:
+#     - requested_slot: date
+#   - slot_was_set:
+#     - requested_slot: time
+#   - slot_was_set:
+#     - requested_slot: location
+#   - slot_was_set:
+#     - requested_slot: perpetrator_name
+#   - slot_was_set:
+#     - requested_slot: perpetrator_relation
+#   - action: action_display_details
+#   - intent: affirm
+#   - action: utter_legal_advice
 
 - story: Requesting POSH Act Information
   steps:
@@ -36,6 +53,8 @@ stories:
   steps:
   - intent: legal_advice
   - action: utter_legal_advice
+  # - intent: affirm
+  # - action: utter_ask_for_mail
 
 - story: Exploring Support Services
   steps:
@@ -68,14 +87,102 @@ stories:
   steps:
   - intent: fallback
   - action: utter_fallback
-
-
-
-
-
-
-
-
-
-
-
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: share_experience
+  - action: utter_sentimental_response
+  - intent: affirm
+  - action: utter_ask_for_description
+  - action: description_form
+  - active_loop: description_form
+  - slot_was_set:
+    - requested_slot: detailed_description
+  - intent: provide_detailed_description
+    entities:
+    - detailed_description: I was working late in my office when my manager touched me inapropriately
+  - slot_was_set:
+    - detailed_description: I was working late in my office when my manager touched me inapropriately
+  - action: description_form
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_predict_harassment_class
+  - slot_was_set:
+    - harassment_classification: Groping
+  - action: utter_would_you_give_details
+  - intent: affirm
+  - action: incident_form
+  - active_loop: incident_form
+  - slot_was_set:
+    - requested_slot: date
+  - intent: provide_date
+    entities:
+    - date: 18-03-204
+  - slot_was_set:
+    - date: 18-03-204
+  - action: incident_form
+  - slot_was_set:
+    - requested_slot: time
+  - intent: provide_time
+    entities:
+    - time: 6 pm
+  - slot_was_set:
+    - time: 6 pm
+  - action: incident_form
+  - slot_was_set:
+    - requested_slot: location
+  - intent: provide_location
+    entities:
+    - detailed_description: in
+    - location: office
+  - slot_was_set:
+    - location: office
+  - slot_was_set:
+    - detailed_description: in
+  - intent: provide_location
+    entities:
+    - location: office
+  - slot_was_set:
+    - location: office
+  - action: incident_form
+  - slot_was_set:
+    - requested_slot: perpetrator_name
+  - intent: provide_perpetrator_name
+    entities:
+    - perpetrator_name: John Doe
+  - slot_was_set:
+    - perpetrator_name: John Doe
+  - action: incident_form
+  - slot_was_set:
+    - requested_slot: perpetrator_relation
+  - intent: provide_perpetrator_relation
+    entities:
+    - perpetrator_relation: manager
+  - slot_was_set:
+    - perpetrator_relation: manager
+  - action: incident_form
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_display_details
+  - intent: affirm
+  - action: utter_legal_advice
+  - action: utter_ask_for_mail
+  - intent: provide_email
+    entities:
+    - email: swaralimkar11@gmail.com
+  - slot_was_set:
+    - email: swaralimkar11@gmail.com
+  - action: action_create_and_send_report
+  - action: action_create_and_send_report
+  - intent: provide_email
+    entities:
+    - email: mahimkarswarali@gmail.com
+  - slot_was_set:
+    - email: mahimkarswarali@gmail.com
+  - action: action_create_and_send_report
+  - intent: thank_you
+  - action: utter_thank_you
+  - intent: nlu_fallback

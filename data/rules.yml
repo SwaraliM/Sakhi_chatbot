@@ -12,6 +12,24 @@ rules:
   - intent: bot_challenge
   - action: utter_iamabot
 
+- rule: Submit description form
+  condition:
+  # Condition that form is active.
+  - active_loop: description_form
+  steps:
+  # Form is deactivated
+  - action: description_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  # The actions we want to run when the form is submitted.
+  - action: action_predict_harassment_class
+  - action: utter_would_you_give_details
+  - intent: affirm
+  - action: incident_form
+  - active_loop: incident_form
+  # - action: utter_ask_for_details
+
 - rule: submit form
   condition:
   - active_loop: incident_form
@@ -23,3 +41,4 @@ rules:
   - action: action_display_details
   - intent: affirm
   - action: utter_legal_advice
+  - action: utter_ask_for_mail

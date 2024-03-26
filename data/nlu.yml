@@ -1,13 +1,10 @@
 version: "3.1"
-
 nlu:
-
 - intent: posh_act_information
   examples: |
     - Tell me about the POSH Act of 2013.
     - What does the POSH Act say about workplace harassment?
     - Explain the provisions of the POSH Act.
-
 - intent: legal_advice
   examples: |
     - Do I need legal advice regarding harassment?
@@ -16,7 +13,6 @@ nlu:
     - What are my legal rights?
     - Tell me about workplace harassment laws.
     - Can you provide legal information?
-
 - intent: provide_details
   examples: |
     - The incident happened on [2023-09-15](date) at [2:30 PM](time) in [my office](location). I was harassed by [John Doe](perpetrator_name), my [manager](perpetrator_relation).
@@ -24,7 +20,6 @@ nlu:
     - The harassment occurred at [home](location) on [2023-09-25](date).
     - [Jane Doe](perpetrator_name) is my [colleague](perpetrator_relation).
     - [2023-09-10](date), [9:45 AM](time), [cafeteria](location), [David Johnson](perpetrator_name), [coworker](perpetrator_relation).
-
 - intent: provide_date
   examples: |
     - [4-10-2023](date)
@@ -32,7 +27,9 @@ nlu:
     - The incident happened on [2023-09-15](date)
     - The date is [3rd october](date)
     - [4/10/2023](date)
-
+    - [14/02/2024](date)
+    - [15/02/2024](date)
+    - [18-03-204](date)
 - intent: provide_time
   examples: |
     - [10 am](time)
@@ -40,8 +37,9 @@ nlu:
     - It occurred around [time].
     - The time of the incident was [time].
     - I can provide the time, it was [time].
-
-
+    - [8 pm](time)
+    - it was around [10 pm](time)
+    - it was around [6 pm](time)
 - intent: provide_location
   examples: |
     - The incident took place at [location].
@@ -51,8 +49,9 @@ nlu:
     - in [conference room of office](location).
     - [ABC pvt Ltd](location).
     - [location](location)
-
-
+    - it happened in my [office](location)
+    - in the [conference room](location)
+    - it took place in my [office](location)
 - intent: provide_perpetrator_name
   examples: |
     - The person involved is [perpetrator_name].
@@ -62,7 +61,9 @@ nlu:
     - [ABC](perpetrator_name)
     - [Jane Doe](perpetrator_name)
     - [perpetrator_name]
-
+    - [Jane doe]{"entity": "perpetrator_name", "value": "Jane Doe"}
+    - [john doe]{"entity": "perpetrator_name", "value": "John Doe"}
+    - his name is [john doe]{"entity": "perpetrator_name", "value": "John Doe"}
 - intent: provide_perpetrator_relation
   examples: |
     - The person is my [perpetrator_relation].
@@ -71,33 +72,62 @@ nlu:
     - He is my [collegue](perpetrator_relation)
     - [Manager](perpetrator_relation)
     - [supervisor](perpetrator_relation)
-
-
-    
+    - She is my [supervisor](perpetrator_relation)
+    - he is my [manager](perpetrator_relation)
+    - he is my [manager](perpetrator_relation)
+- intent: provide_detailed_description
+  examples: |
+    - [My supervisor made unwanted sexual advances towards me during a business trip](detailed_description)
+    - [A colleague frequently made lewd comments about my body in the office](detailed_description)
+    - [I received inappropriate emails from a coworker with suggestive content](detailed_description)
+    - [During a company event, a manager groped me without consent](detailed_description)
+    - [I overheard sexist jokes being told by my team members during lunch breaks](detailed_description)
+    - [A client made inappropriate remarks about my appearance during a meeting](detailed_description)
+    - [I was denied a promotion because I refused to engage in a romantic relationship with my boss](detailed_description)
+    - [A coworker repeatedly asked me out on dates despite my clear disinterest](detailed_description)
+    - [I was subjected to unwanted physical contact by a colleague in the workplace](detailed_description)
+    - [My manager used their position of power to pressure me into engaging in sexual activities](detailed_description)
+    - [Catcalling and young boys following me near Marine Drive](detailed_description)
+    - [on my way home I met boys by the roadside and I saw them whistling at my friend and calling her names](detailed_description)
+    - [i was standing with my friend then a police bus came and a police man on the last seat passed filthy expression](detailed_description)
+    - [ogling and catcalling](detailed_description)
+    - [In residential area, guys harrased a lil gal provoking her](detailed_description)
+    - [i was touched by an old man in microvan](detailed_description)
+    - [We were walking when a few guys passed remarks against us](detailed_description)
+    - [In class 12, while returning from my tuition classes, some of the boys passes lewd comments](detailed_description)
+    - [During evening hours, two guys stopped the car and started commenting in a vulgar way and asked for lift etc!](detailed_description)
+    - [Some men said very bad words to me and commented on my figure. They even took my pictures](detailed_description)
+    - [It was during afternoon hours that I was touched and faces were made](detailed_description)
+    - [My friend had a primary teacher in her school who used to behave ackwardly. If students would complain he would beat them without any reason](detailed_description)
+    - [One of the male daily traveller used to take advantage of crowded bridge and used to touch and press ladies](detailed_description)
+    - [harassed in the evening](detailed_description)
+    - [My friend was harassed by her own boss at the reputed company. He kissed her forcefully without her will](detailed_description)
+    - [Jubilee Hills Road Number 10  Extremely dark road to walk on. Absolute No No if you are alone. Must carry pepperspray in your hand when walking here even to catch an autorickshaw. Bikers will catcall/whistle relentlessly](detailed_description)
+    - [I was working in my office when my manager came in and stared at me for a long time. He then proceeded to touch me inapropriately](detailed_description)
+    - [my manager made rude remarks about my outfit in the office](detailed_description)
+    - [I was working late in my office when my manager touched me inapropriately](detailed_description)
 - intent: support_services
   examples: |
     - Where can I find support services for harassment victims?
     - Tell me about organizations that help harassment victims.
     - Provide a list of support services for workplace harassment.
-
 - intent: contact_hr
   examples: |
     - How do I contact my company's HR department?
     - Give me the contact details for HR at my workplace.
     - I need to reach out to HR about harassment.
-
 - intent: emergency_help
   examples: |
     - It's an emergency. What should I do?
     - Who do I call in case of immediate danger due to harassment?
     - Urgent assistance needed for harassment situation.
-
 - intent: thank_you
   examples: |
     - Thank you for your help.
     - I appreciate your support.
     - You've been very helpful, thanks.
-
+    - thanks
+    - thank you
 - intent: goodbye
   examples: |
     - Goodbye.
@@ -113,19 +143,16 @@ nlu:
     - see you around
     - bye bye
     - see you later
-
 - intent: clarify
   examples: |
     - Can you explain that further?
     - I didn't understand. Could you elaborate?
     - Please clarify.
-
 - intent: fallback
   examples: |
     - Sorry, I'm not sure what you mean.
     - I didn't get that. Can you rephrase?
     - I don't understand.
-
 - intent: greet
   examples: |
     - hey
@@ -141,7 +168,6 @@ nlu:
     - goodmorning
     - goodevening
     - good afternoon
-
 - intent: affirm
   examples: |
     - yes
@@ -150,7 +176,8 @@ nlu:
     - of course
     - that sounds good
     - correct
-
+    - okay
+    - ok
 - intent: deny
   examples: |
     - no
@@ -160,22 +187,30 @@ nlu:
     - don't like that
     - no way
     - not really
-
 - intent: bot_challenge
   examples: |
     - are you a bot?
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
-
-
 - intent: provide_email
   examples: |
     - My email address is [user@example.com](email).
     - Here is my email: [john.doe@email.com](email).
     - Contact me at [test@example.org](email).
     - You can reach me at [jane.smith@example.net](email).
-
+    - my email is [john@example.com](email)
+    - here's my email: [alice@example.com](email)
+    - you can reach me at [bob@example.com](email)
+    - my email address is [charlie@example.com](email)
+    - email: [david@example.com](email)
+    - email id: [emma@example.com](email)
+    - my email: [frank@example.com](email)
+    - you can contact me at [grace@example.com](email)
+    - my email address is [hannah@example.com](email)
+    - [hannah@example.com](email)
+    - my email is [swaralimkar11@gmail.com](email)
+    - [mahimkarswarali@gmail.com](email)
 - intent: share_experience
   examples: |
     - I had a terrible experience.
@@ -189,15 +224,25 @@ nlu:
     - I want to report the incident.
     - How can I report harassment?
     - What should I do to report this?
-
+    - something terrible happened today. I want to talk about an incident
+    - i want to report harassment
+    - i want toi report harassment
 - intent: ngo_recommendation
   examples: |
     - Recommend some NGOs.
     - NGO suggestions, please.
     - Tell me about organizations that can help.
-
 - intent: physical_abuse
   examples: |
     - I was physically abused.
     - The situation involved physical harm.
     - I need help with a physical assault.
+- synonym: Jane Doe
+  examples: |
+    - Jane doe
+- synonym: John Doe
+  examples: |
+    - john doe
+- regex: email
+  examples: |
+    - \b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b
