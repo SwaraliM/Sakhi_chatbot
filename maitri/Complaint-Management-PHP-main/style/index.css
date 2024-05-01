@@ -1,0 +1,190 @@
+/* Center the svg and set the background to white */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel&family=Raleway:wght@500&family=Young+Serif&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:wght@500&family=Young+Serif&display=swap'); */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #ffffff;
+    font-family: "Montserrat", sans-serif;
+    /* background-color: #000000; */
+  }
+  
+  /* Make the svg a white circle and give it the default spinning animation */
+  svg {
+    background-color: #ffffff;
+    border-radius: 50%;
+    animation: spin 3s ease infinite alternate;
+  }
+  
+  /*Give each dot a radius of 20*/
+  .shape {
+    r: 20;
+  }
+  
+  /*Give each dot its positioning and set the default animation and color for each */
+  .shape:nth-child(1) {
+    cy: 50;
+    cx: 50;
+    fill: #c20f00;
+    animation: movein 2s ease infinite alternate;
+  }
+  .shape:nth-child(2) {
+    cy: 50;
+    cx: 150;
+    fill: #ffdd22;
+    animation: movein 2s ease infinite alternate;
+  }
+  .shape:nth-child(3) {
+    cy: 150;
+    cx: 50;
+    fill: #2374c6;
+    animation: movein 2s ease infinite alternate;
+  }
+  .shape:nth-child(4) {
+    cy: 150;
+    cx: 150;
+    fill: #000000;
+    animation: movein 2s ease infinite alternate;
+  }
+  
+  /* Put the two interface options at the bottom of the screen */
+  .control-panel {
+    position: fixed;
+    bottom: 5px;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Set color and placement of labels */
+  .switch-label {
+    display: inline-block;
+    color: #000000;
+    margin: 5px;
+  }
+  
+  /* Set area of switches */
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+  }
+  
+  /* Get rid of checkbox defaults */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* Create the slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ffdd22;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 19px;
+    width: 19px;
+    left: 3px;
+    bottom: 3px;
+    background-color: #000000;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+  
+  /* Change color on checked */
+  input:checked + .slider {
+    background-color: #c20f00;
+  }
+  
+  /* Set second color change */
+  .movement input:checked + .slider {
+    background-color: #2374c6;
+  }
+  
+  /* Set the focus to same color as when checked*/
+  input:focus + .slider {
+    box-shadow: 0 0 3px #c20f00;
+  }
+  .movement input:focus + .slider {
+    box-shadow: 0 0 3px #2374c6;
+  }
+  
+  /* Actually move the slider when checked*/
+  input:checked + .slider:before {
+    -webkit-transform: translateX(25px);
+    -ms-transform: translateX(25px);
+    transform: translateX(25px);
+  }
+  
+  /* Round the sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  
+  /*Spin the svg so all the dots spin*/
+  @keyframes spin {
+    to {
+      transform: rotate(1turn);
+    }
+  }
+  
+  /* Move all the dots toward the center */
+  @keyframes movein {
+    to {
+      cy: 100;
+      cx: 100;
+    }
+  }
+  
+  /* Set a bouncy ball type movement for the dots */
+  @keyframes moveup {
+    to {
+      cy: 20;
+    }
+  }
+  
+
+  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+  span {
+
+    font-family: 'Bebas Neue', sans-serif;
+font-family: 'Cinzel', serif;
+font-family: 'Raleway', sans-serif;
+font-family: 'Young Serif', serif;
+    font-size: 1.3em;
+    /* position: absolute; */
+    /* top: 30%; */
+    /* left: 50%; */
+    margin-bottom: 13em;
+    /* transform: translate(-50%,-50%); */
+    /* background-image: linear-gradient(#4F4789, #4F4789); */
+    /* letter-spacing: 3px; */
+    text-transform: uppercase;
+    /* color: wheat; */
+    background-size: 100% 10px;
+    background-repeat: no-repeat;
+    background-position: 100% 0%;
+     transition: background-size .4s, background-position .5s ease-in-out;
+  }
+  
+  span:hover {
+    background-size: 100% 100%;
+    background-position: 0% 100%;
+    transition: background-position .7s, background-size .5s ease-in-out;
+  }

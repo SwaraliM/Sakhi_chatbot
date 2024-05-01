@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="assets/images/Sakhi.jpg" />
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0"
+      crossorigin="anonymous"
+    />
+    <!-- Fontawesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Hover.css CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css"
+      integrity="sha512-csw0Ma4oXCAgd/d4nTcpoEoz4nYvvnk21a8VA2h2dzhPAvjbUIK6V3si7/g/HehwdunqqW18RwCJKpD7rL67Xg=="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css"
+    />
+    <!-- Custom CSS style sheet -->
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <title>Sakhi | A website for Womens!</title>
+    <style>
+      .blink {
+        animation: blinker 1.5s linear infinite;
+        color: rgb(255, 0, 174);
+        font-family: sans-serif;
+      }
+
+      @keyframes blinker {
+        50% {
+          opacity: 0;
+        }
+      }
+
+      .dropbtn {
+        /* background-color: #04aa6d; */
+        /* color: white; */
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+        text-decoration: none;
+      }
+
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        /* background-color: #f1f1f1; */
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgb(255, 254, 254);
+        z-index: 1;
+      }
+
+      .dropdown-content a {
+        /* color: rgb(255, 255, 255); */
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+
+      .dropdown-content a:hover {
+        /* background-color: #ddd; */
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      .dropdown:hover .dropbtn {
+        /* background-color: #3e8e41; */
+        text-decoration: none;
+      }
+
+      .blinking-button {
+        position: relative;
+        top: 10px; /* You can adjust the top value to change the vertical position */
+        right: -500px;
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        text-align: center;
+        text-decoration: none;
+        background-color: rgb(255, 0, 174);
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        animation: blink 1.5s infinite;
+      }
+
+      @keyframes blink {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- chat -->
+    <section>
+      <div id = "rasa-chat-widget" data-websocket-url="http://localhost:8098/socket.io"></div>
+      <script src="https://unpkg.com/@rasahq/rasa-chat" type="application/javascript"></script>
+    </section>
+    <!-- <section>
+      <button class="chat-btn">
+        <i class="material-icons"> comment </i>
+      </button>
+
+      <div class="chat-popup">
+        <div class="badge">1</div>
+        <div class="chat-area">
+          <div class="income-msg">
+            <img src="img/person.jpg" class="avatar" alt="" />
+            <span class="msg"> Hi, How can I help you?</span>
+          </div>
+        </div>
+
+        <div class="input-area">
+          <input type="text" />
+          <button id="emoji-btn">&#127773;</button>
+          <button class="submit"><i class="material-icons"> send</i></button>
+        </div>
+      </div>
+    </section> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@joeattardi/emoji-button@3.1.1/dist/index.min.js"></script>
+    <script src="main.js"></script>
+    <!-- chatclose -->
+    <div
+      class="container landing"
+      style="
+        background-image: url('assets/images/bg-pattern-top.svg'),
+          url('assets/images/bg-pattern-bottom.svg');
+      "
+    >
+      <!-- Navbar -->
+      <header>
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid">
+            <a class="navbar-brand logo" href="index.html">Sakhi</a>
+            <button
+              class="navbar-toggler custom-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <button class="blinking-button">ChatBot!</button>
+
+            <div
+              class="collapse navbar-collapse nav justify-content-end"
+              id="navbarSupportedContent"
+            >
+              <ul class="nav justify-content-end">
+                <li class="nav-item navhome active">
+                  <a class="nav-link" aria-current="page" href="index.html"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item navhome">
+                  <a
+                    class="nav-link"
+                    href="http://localhost/Complaint-Management-PHP-main/pages/landing.php"
+                    >Complaint tracking System</a
+                  >
+                </li>
+                <li class="nav-item navhome">
+                  <a class="nav-link navhome" href="mentors.html">Events </a>
+                </li>
+                <li class="nav-item navhome">
+                  <a class="nav-link navhome" href="help.html">Help </a>
+                </li>
+                <li class="nav-item navhome">
+                  <!-- <a class="nav-link" href="resources.html">Resource Library</a> -->
+                  <div class="dropdown">
+                    <a class="dropbtn">Resources</a>
+                    <!-- <button class="dropbtn">Resource Library</button> -->
+                    <div class="dropdown-content">
+                      <a class="nav-link" href="resources.html"
+                        >Resource Library</a
+                      >
+
+                      <!-- <li class="nav-item navhome">
+                        <a class="nav-link navhome" href="help.html">Help </a>
+                      </li> -->
+
+                      <a class="nav-link" href="faq.html">FAQs</a>
+                      <a class="nav-link" href="fir filling.html">FIR Filing</a>
+                    </div>
+                  </div>
+                  <link rel="stylesheet" href="index.css" />
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <div class="container">
+        <div class="row landing-row">
+          <div class="col-12 col-lg-6">
+            <h1 class="home-heading">
+              Feel Free With <strong class="blink">Sakhi</strong>
+            </h1>
+            <p class="home-intro">Safe Spaces,Strong Womens!</p>
+          </div>
+          <div class="col-12 col-lg-6">
+            <img
+              src="assets/images/idea.png"
+              alt="female with laptop"
+              class="landing-img"
+            />
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <div class="text-center">
+                  <a
+                    href="#rolemodel-section"
+                    role="button"
+                    aria-label="Go to Rolemodel section"
+                  >
+                    <i class="fas fa-chevron-down arrow hvr-bob"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <main class="container">
+      <!-- Female role models in tech-->
+      <section>
+        <div class="container-fluid">
+          <h2 class="mb-5" id="rolemodel-section">Aboutus</h2>
+          <div class="circle"></div>
+          <div class="row my-5 align-items-center">
+            <div class="col-12 col-lg-6">
+              <div class="talk-bubble tri-right round right-in">
+                <p class="rolemodel-p">
+                  Welcome to Sakhi, a platform committed to creating safe and
+                  respectful workplaces for women across industries. We believe
+                  that every woman deserves a workplace free from the fear of
+                  sexual harassment, discrimination, and intimidation. Our
+                  mission is to empower women, raise awareness, and foster
+                  change by providing essential resources, support, and
+                  advocacy.At Sakhi, our vision is a world where women can
+                  pursue their careers without the burden of harassment. We
+                  envision workplaces that embrace diversity, equality, and
+                  inclusivity, recognizing the immense value women bring to
+                  every sector.
+                </p>
+              </div>
+            </div>
+            <div class="col-12 col-lg-6 text-end text-lg-center">
+              <img
+                class="rolemodels-img"
+                src="./assets/images/women-empowerment.jpg"
+                alt="Woman wearing a dark purple hijab, smiling slighlty"
+                height="400px"
+                width="300px"
+              />
+            </div>
+          </div>
+          <div class="container-fluid">
+            <div class="row">
+              <h1 class="rolemodels-info">
+                <i class="fas fa-arrow-circle-right"></i>
+                <b>Steps to Prevent sexual harassment</b>
+              </h1>
+              <div class="col-12 col-md-6 col-lg-4 mt-5 px-2">
+                <div class="flip-card p-3">
+                  <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                      <img
+                        class="flip-card-img mt-2"
+                        src="./assets/images/speakup.jpg"
+                        alt="Portrait of Ada Lovelace wearing a victorian dress"
+                      />
+                      <div class="front-text">
+                        <h1>Speak-up</h1>
+                      </div>
+                    </div>
+                    <div class="flip-card-back">
+                      <h5>
+                        <b>Speaking out:</b> Speaking about sexual harassment is
+                        an effective tool in combating it. While speaking about
+                        it, the problem becomes visible, it is acknowledged that
+                        it exists, and this in turn leads one to take effective
+                        measures against it. Speaking about sexual harassment
+                        also gives an opportunity to clarify this about it. It
+                        helps in changing the attitudes of people towards this
+                        issue. Speaking about it creates an enabling environment
+                        for the victim to speak out.
+                      </h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 col-lg-4 mt-5 px-2">
+                <div class="flip-card p-3">
+                  <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                      <img
+                        class="flip-card-img mt-2"
+                        src="./assets/images/sayno.jpg"
+                        alt="Portrait of Grace Hopper in uniform, at an older age"
+                      />
+                      <div class="front-text">
+                        <h1>Say No</h1>
+                      </div>
+                    </div>
+                    <div class="flip-card-back">
+                      <h5>
+                        <b>Set your own boundaries:</b> Say “NO” emphatically
+                        and clearly when you are asked to go places, do things,
+                        respond to questions, or engage in situations that make
+                        you uncomfortable. Do not worry about offending the
+                        other person or hurting his or her ego. Take care of
+                        yourself first.
+                      </h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 col-lg-3 mt-5">
+                <div class="flip-card p-3">
+                  <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                      <img
+                        class="flip-card-img mt-2"
+                        src="./assets/images/tell.jpg"
+                        alt="BLack and white photo of Katherine Johnson sitting at her desk, smiling"
+                      />
+                      <div class="front-text">
+                        <h1>Tell Someone</h1>
+                      </div>
+                    </div>
+                    <div class="flip-card-back">
+                      <h6>
+                        <b>Create a Witness to the behavior:</b> Inform a
+                        trusted colleague and try to ensure that s/he is an eye
+                        or ear witness to a situation where you are being
+                        sexually harassed. This will be useful later if you
+                        chose to file a formal complaint. Send a copy of the
+                        sexual harassment policy/rules to the harasser. If your
+                        workplace already has an anti-sexual harassment policy
+                        or the conduct rules of your institution prohibit sexual
+                        harassment, send a copy of the institution
+                        policy/conduct rules to the harasser with the
+                        appropriate sections underlined.
+                      </h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 col-lg-4 mt-5 px-2">
+                <div class="flip-card p-3">
+                  <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                      <img
+                        class="flip-card-img mt-2"
+                        src="./assets/images/report.jpg"
+                        alt="Signed idol portrait of Hedy Lamarr with red background"
+                        height="300px"
+                      />
+                      <div class="front-text">
+                        <h1>Report Complaint</h1>
+                      </div>
+                    </div>
+                    <div class="flip-card-back">
+                      <h4>
+                        <b
+                          >Report sexual harassment to the appropriate person in
+                          the organization:</b
+                        >
+                        Explore the different avenues available to you and file
+                        a formal complaint if necessary. If your organization
+                        does not have a policy, ensure that your employer
+                        formulates an anti-sexual harassment policy and carries
+                        out all the connected tasks
+                      </h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 col-lg-4 mt-5 px-2">
+                <div class="flip-card p-3">
+                  <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                      <img
+                        class="flip-card-img mt-2"
+                        src="./assets/images/law.jpg"
+                        alt="hoto of Radia Perlman, smiling an holding and open book in her hands"
+                        height="300px"
+                      />
+                      <div class="front-text">
+                        <h1>Aware of policies</h1>
+                      </div>
+                    </div>
+                    <div class="flip-card-back">
+                      <h5>
+                        <b>Sensitization</b> is directly known to reduce the
+                        incidence of sexual harassment and building a better
+                        workplace as men who are aware of it and its
+                        consequences will be less likely to indulge in such
+                        acts. A good onboarding strategy will ensure that
+                        suspicions about misuse of the Act in the minds of the
+                        target audience are paid due attention to and addressed.
+                      </h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 col-lg-4 px-2 mt-5">
+                <div class="flip-card p-3">
+                  <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                      <img
+                        class="flip-card-img mt-2"
+                        src="./assets/images/aware.png"
+                        alt="Photo of Karen Spärck Jones at older age, slighlty smiling"
+                        height="300px"
+                      />
+                      <div class="front-text">
+                        <h1>Be Aware</h1>
+                      </div>
+                    </div>
+                    <div class="flip-card-back">
+                      <h4>
+                        <b>Be aware</b> and conscious of engaging in potential
+                        sexual-harassment behaviors or incidents at work; be
+                        sensitive to individuals who may be offended by the
+                        verbal and non-verbal behavior of others; be aware of
+                        subtle forms of sexual harassment;watch for and
+                        discourage sexual behaviors that negatively affect work.
+                      </h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-4"></div>
+              <div class="col-12 col-md-6 col-lg-4 mt-5 px-2">
+                <div class="flip-card p-3">
+                  <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                      <img
+                        class="flip-card-img mt-2"
+                        src="./assets/images/self-defense.jpg"
+                        alt="Anonymous portrait photo of drawn woman"
+                        height="300px"
+                      />
+                      <div class="front-text">
+                        <h1>Training</h1>
+                      </div>
+                    </div>
+                    <div class="flip-card-back">
+                      <h4>
+                        Prevention of sexual harassment in the workplace
+                        requires training programs for both employers and
+                        employees, which concretely address such topics as the
+                        national laws that prohibit sexual harassment, creating
+                        workplace polices and steps that individuals can take.
+                      </h4>
+                    </div>
+                    <div class="col-4"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="intro-btn-div">
+        <a
+          class="btn btn-lg intro-btn hvr-pulse"
+          href="resources.html"
+          role="button"
+        >
+          Go to Resources
+        </a>
+      </div>
+    </main>
+    <footer>
+      <div class="container-fluid text-center" id="footer">
+        <div class="row">
+          <div class="col">
+            <h2>Visit us!</h2>
+            <!-- Mentors Github links -->
+            <ul class="github-links"></ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Scripts -->
+    <!-- Bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Empower young gils to enter the coding world">
+    <meta name="keywords" content="Coding, Girls, Sotware development, women coders, women in technology">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="assets/images/Sakhi.jpg">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <!-- Fontawesome Icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Hover.css CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css"
+        integrity="sha512-csw0Ma4oXCAgd/d4nTcpoEoz4nYvvnk21a8VA2h2dzhPAvjbUIK6V3si7/g/HehwdunqqW18RwCJKpD7rL67Xg=="
+        crossorigin="anonymous" />
+    <!-- Custom CSS style sheet -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAQs</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/c1fc3d2826.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      
+        background:#57039d;
+        color: #0f0f0f;
+      }
+        .blink {
+          animation: blinker 1.5s linear infinite;
+          color: rgb(255, 0, 174);
+          font-family: sans-serif;
+        }
+    
+        @keyframes blinker {
+          50% {
+            opacity: 0;
+          }
+        }
+    
+        .dropbtn {
+          /* background-color: #04aa6d; */
+          /* color: white; */
+          padding: 16px;
+          font-size: 16px;
+          border: none;
+          text-decoration: none;
+        }
+    
+        .dropdown {
+          position: relative;
+          display: inline-block;
+        }
+    
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          /* background-color: #f1f1f1; */
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgb(255, 254, 254);
+          z-index: 1;
+        }
+    
+        .dropdown-content a {
+          /* color: rgb(255, 255, 255); */
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+        }
+    
+        .dropdown-content a:hover {
+          /* background-color: #ddd; */
+        }
+    
+        .dropdown:hover .dropdown-content {
+          display: block;
+        }
+    
+        .dropdown:hover .dropbtn {
+          /* background-color: #3e8e41; */
+          text-decoration: none;
+        }
+    
+        .blinking-button {
+          position: relative;
+          top: 10px; /* You can adjust the top value to change the vertical position */
+          right: -500px;
+          display: inline-block;
+          padding: 10px 20px;
+          font-size: 16px;
+          text-align: center;
+          text-decoration: none;
+          background-color: rgb(255, 0, 174);
+          color: #fff;
+          border: none;
+          border-radius: 5px;
+          animation: blink 1.5s infinite;
+        }
+    
+        @keyframes blink {
+          0%,
+          100% {
+            opacity: 1;
+          }
+          50% {
+            opacity: 0;
+          }
+        }
+      </style>
+
+  </head>
+
+  <body>
+  
+    <header>
+      <!-- Navbar -->
+      <nav class="navbar navbar-color navbar-expand-lg">
+
+          <div
+            class="collapse navbar-collapse nav justify-content-end"
+            id="navbarSupportedContent"
+          >
+            <ul class="nav justify-content-end">
+              <li class="nav-item navhome active">
+                <a class="nav-link" aria-current="page" href="index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item navhome">
+                <a
+                  class="nav-link"
+                  href="http://localhost/Complaint-Management-PHP-main/pages/landing.php"
+                  >Complaint tracking System</a
+                >
+              </li>
+              <li class="nav-item navhome">
+                <a class="nav-link navhome" href="mentors.html">Events </a>
+              </li>
+              <li class="nav-item navhome">
+                <a class="nav-link navhome" href="help.html">Help </a>
+              </li>
+              <li class="nav-item navhome">
+                <!-- <a class="nav-link" href="resources.html">Resource Library</a> -->
+                <div class="dropdown">
+                  <a class="dropbtn">Resources</a>
+                  <!-- <button class="dropbtn">Resource Library</button> -->
+                  <div class="dropdown-content">
+                    <a class="nav-link" href="resources.html"
+                      >Resource Library</a
+                    >
+
+                    <!-- <li class="nav-item navhome">
+                      <a class="nav-link navhome" href="help.html">Help </a>
+                    </li> -->
+
+                    <a class="nav-link" href="faq.html">FAQs</a>
+                    <a class="nav-link" href="fir filling.html">FIR Filing</a>
+                  </div>
+                </div>
+                <link rel="stylesheet" href="index.css" />
+              </li>
+            </ul>
+          </div>
+        </div>
+       </header>
+   
+
+    <h2>FAQ's</h2>
+
+    <div class="accordian">
+      <div class="question">
+        <h4>Are there any specific duties of an employer under law?</h4>
+        <i class="icon fa-solid fa-caret-down"></i>
+      </div>
+      <div class="answer">
+        <p>
+          Yes. The law has provided for several duties of an employer. Some of
+          them are: Provide a safe working environment at workplace which
+          includes safety from persons coming into contact at workplace. Display
+          at any conspicuous place in the workplace, the penal consequences of
+          sexual harassment and the order constituting the Internal Committee
+          (“IC“). Formulate and widely disseminate an internal policy for
+          prohibition, prevention and redressal of sexual harassment. Declare
+          the names and contact details of all the members of IC. Organize
+          workshops and awareness programs at regular intervals for sensitizing
+          employees. Organize orientation programs for IC members. Conduct
+          capacity building and skill building programs for IC members. Carry
+          out employees awareness programs and create forum for dialogue. Use
+          modules developed by State Government to conduct workshops and
+          awareness programs. You can read through to understand how you can
+          comply with these duties. Needless to say, we are there to help you at
+          each stage, if required.
+        </p>
+      </div>
+    </div>
+
+    <div class="accordian">
+      <div class="question">
+        <h4>
+          What happens if I do not fulfil the duties prescribed under law?
+        </h4>
+        <i class="icon fa-solid fa-caret-down"></i>
+      </div>
+      <div class="answer">
+        <p>
+          If you do not constitute the IC and fulfil the rest of the duties
+          enshrined under the Act, there can be a penalty under the law which
+          may extend to Rs. 50,000. In case of not fulfilling the duties
+          repeatedly, the penalty can be doubled and in cases where one is
+          required to obtain a license to do business, such license may be
+          cancelled or an application for registration or renewal may be
+          withdrawn and cancelled.
+        </p>
+      </div>
+    </div>
+
+    <div class="accordian">
+      <div class="question">
+        <h4>What are the preventive steps I can take as an employer?</h4>
+        <i class="icon fa-solid fa-caret-down"></i>
+      </div>
+      <div class="answer">
+        <p>
+          You can: Organize regular training programs for your IC members so
+          that they are fully up to date on the law and the procedure. Organize
+          awareness programs for employees on a time to time basis to keep them
+          informed of their rights and duties and what may constitute sexual
+          harassment. Organize sessions for management so that they can comply
+          with the law effectively and take measures to prevent instances of
+          sexual harassment and create a healthy work atmosphere. Have
+          orientation programs for new joinees to inform them of your beliefs
+          and policy. Have gender sensitization programs to instil the feeling
+          of equality at workplace. This can go a long way in showing that you
+          are an equal opportunity employer. Ensure that your IC meets on a
+          regular basis to discuss issues and keep themselves updated. Provide
+          your IC with all the facilities they require.
+        </p>
+      </div>
+    </div>
+
+    <div class="accordian">
+      <div class="question">
+        <h4>Can I share details of a complaint on the POSH at Work website?</h4>
+        <i class="icon fa-solid fa-caret-down"></i>
+      </div>
+      <div class="answer">
+        <p>
+          No. We request you not to display / share details of any matter of
+          sexual harassment or the identities of the concerned persons, as this
+          is a public forum. The law provides that any information related to a
+          matter of sexual harassment cannot be published, communicated or made
+          known to the public, press or media in any manner.
+        </p>
+      </div>
+    </div>
+
+    <div class="accordian">
+      <div class="question">
+        <h4>Can I ask for legal advice from POSH at Work?</h4>
+        <i class="icon fa-solid fa-caret-down"></i>
+      </div>
+      <div class="answer">
+        <p></p>
+        Yes. You can drop your query or ask for a lawyer here. We will be more
+        than happy to help you.
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

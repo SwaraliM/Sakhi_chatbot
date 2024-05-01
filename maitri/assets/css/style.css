@@ -1,0 +1,848 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
+/* --------------------------------- General*/
+
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+/* body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #e5e5e5;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+}
+*/
+section {
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+  padding: 0 1rem;
+} 
+
+.chat-btn {
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  background: rgb(255, 30, 203);
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4);
+}
+
+.chat-btn:hover,
+.submit:hover,
+#emoji-btn:hover {
+  opacity: 1;
+}
+
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 80px;
+  right: 120px;
+  height: 400px;
+  width: 300px;
+  background-color: white;
+  /* display: flex; */
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0.75rem;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+}
+
+.show {
+  display: flex;
+}
+
+.chat-area {
+  height: 80%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.income-msg {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.income-msg .msg {
+  background-color: dodgerblue;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 25px;
+  margin-left: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.badge {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: -10px;
+  right: -10px;
+}
+
+.input-area {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+input[type="text"] {
+  width: 100%;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  border-radius: 5px;
+  height: 2.2rem;
+}
+
+#emoji-btn {
+  position: absolute;
+  font-size: 1.2rem;
+  background: transparent;
+  right: 50px;
+  top: 2px;
+  opacity: 0.5;
+}
+
+.submit {
+  padding: 0.25rem 0.5rem;
+  margin-left: 0.5rem;
+  background-color: green;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  opacity: 0.7;
+}
+
+
+.out-msg {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.my-msg {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0.75rem;
+  padding: 0.5rem;
+  background-color: #ddd;
+  border-radius: 25px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  word-break: break-all;
+}
+
+
+@media (max-width:500px) {
+
+  .chat-popup {
+    bottom: 120px;
+    right: 10%;
+    width: 80vw;
+  }
+}
+/* chatend */
+body {
+  font-family: "Nunito", sans-serif;
+  overflow-x: hidden;
+}
+
+h1 {
+  color: #2b1c63;
+  font-weight: 700;
+}
+
+h2 p {
+  color: #424242;
+}
+
+/* ---------------------------------- Navbar */
+
+.navbar {
+  background-color: transparent;
+}
+
+.navbar-color {
+  background-color: #57039d;
+}
+
+.navbar-brand {
+  color: white;
+  font-weight: 800;
+}
+
+.nav > li > a:hover {
+  color: #de786f;
+}
+
+li.active > a {
+  border-bottom: 3px solid white;
+}
+
+/* Logo */
+.logo {
+  font-weight: 800;
+  padding-left: 10px;
+  font-size: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+@media only screen and (min-width: 768px) {
+  /* Logo For desktop: */
+  .logo {
+    padding-left: 50px;
+    font-size: 36px;
+  }
+}
+
+.logo:hover {
+  color: #de786f;
+}
+
+.navhome a {
+  color: white;
+  font-size: 20px;
+}
+
+/* Navbar toggler */
+/* orginal code with modifications from https://www.codeply.com/go/4FdZGlPMNV/bootstrap-4-custom-navbar-toggler-icon-color */
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.custom-toggler.navbar-toggler {
+  border-color: white;
+}
+
+.nav-link {
+  color: #57039d;
+}
+
+/* --------------------------------- Home Page*/
+
+/* Landing section Layout */
+
+.landing-img {
+  width: 100%;
+}
+
+.landing {
+  min-height: 100vh;
+  background-color: #57039d;
+  background-position: bottom 60vh right 60vw, bottom 50vh left 60vw;
+  background-repeat: no-repeat, no-repeat;
+  min-width: 100vw;
+}
+
+.landing-row {
+  padding-top: 15%;
+}
+
+/* Landing page Main heading */
+.home-heading {
+  color: white;
+  font-size: 45px;
+}
+
+@media only screen and (min-width: 768px) {
+  /* Logo For desktop: */
+  .home-heading {
+    font-size: 80px;
+  }
+}
+
+.home-intro {
+  color: white;
+  font-size: 20px;
+  padding-top: 18px;
+}
+
+@media only screen and (min-width: 768px) {
+  /* Logo For desktop: */
+  .home-intro {
+    font-size: 30px;
+  }
+}
+
+/* Arrow landing page*/
+
+.arrow {
+  color: #ffffff;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.text-centre {
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+/* Custom shape style */
+.triangle-home {
+  width: 0;
+  height: 0;
+  float: left;
+  margin-right: 35px;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 50px solid #9cf23c;
+}
+
+/*----------- Role models section */
+
+#rolemodel-section {
+  font-weight: 700;
+  color: #2b1c63;
+  padding: 40px 0px 0px 50px;
+  font-size: 46px;
+}
+
+.rolemodels-img {
+  width: 80%;
+}
+
+.rolemodels-info {
+  text-align: left;
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #5e5d5d;
+}
+
+/* Code for talk bubble adapted from:
+https://codepen.io/Founts/pen/gmhcl */
+
+.talk-bubble {
+  margin: 40px;
+  display: inline-block;
+  position: relative;
+  width: 90%;
+  height: auto;
+  background-color: #fff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 2rem;
+  -webkit-filter: drop-shadow(4px 6px 4px #a8a8aa);
+  filter: drop-shadow(4px 6px 4px #a8a8aa);
+}
+
+.rolemodel-p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  text-align: start;
+  font-size: 20px;
+  color: #424242;
+}
+
+.round {
+  border-radius: 70px;
+  -webkit-border-radius: 60px;
+  -moz-border-radius: 60px;
+}
+
+.tri-right.border.right-in:before {
+  content: " ";
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: auto;
+  right: -40px;
+  top: 200px;
+  bottom: auto;
+  background-color: #fff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.tri-right.right-in:after {
+  content: " ";
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: auto;
+  right: -20px;
+  top: 222px;
+  bottom: auto;
+  border: 12px solid #fff;
+  border-radius: 20%;
+  border-color: transparent transparent #fff #fff;
+}
+
+/* Arrow for tip */
+/* Original Code with modifications from https://codepen.io/bright-digital/pen/KzgPry */
+
+/* right bounce */
+@-webkit-keyframes bounceRight {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  40% {
+    -webkit-transform: translateX(-30px);
+    transform: translateX(-30px);
+  }
+
+  60% {
+    -webkit-transform: translateX(-15px);
+    transform: translateX(-15px);
+  }
+}
+
+@-moz-keyframes bounceRight {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateX(0);
+  }
+
+  40% {
+    transform: translateX(-30px);
+  }
+
+  60% {
+    transform: translateX(-15px);
+  }
+}
+
+@keyframes bounceRight {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  40% {
+    -ms-transform: translateX(-30px);
+    transform: translateX(-30px);
+  }
+
+  60% {
+    -ms-transform: translateX(-15px);
+    transform: translateX(-15px);
+  }
+}
+
+/* assign bounce */
+.fa-arrow-circle-right {
+  -webkit-animation: bounceRight 2s infinite;
+  animation: bounceRight 2s infinite;
+}
+
+/* Code for flip-card effect adapted from:
+https://www.w3schools.com/howto/howto_css_flip_card.asp
+*/
+
+.flip-card {
+  background-color: #fff;
+  width: 300px;
+  height: 490px;
+  border-radius: 20px;
+  -webkit-box-shadow: 3px 3px 4px 2px #33333333;
+  box-shadow: 3px 3px 4px 2px #33333333;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  -webkit-transition: -webkit-transform 0.8s;
+  transition: -webkit-transform 0.8s;
+  -o-transition: transform 0.8s;
+  transition: transform 0.8s;
+  transition: transform 0.8s, -webkit-transform 0.8s;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  background-color: #fdf4d4fd;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  /* Safari */
+  backface-visibility: hidden;
+  background-color: #f8f1dcfd;
+  border-radius: 6px;
+}
+
+/* Style the back side */
+.flip-card-back {
+  color: #7c5a2d;
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  font-size: 0.9rem;
+  padding: 0.5rem;
+}
+
+.front-text {
+  padding: 6% 0 4%;
+  border-radius: 20px;
+  margin: 0 0.5rem;
+}
+
+.flip-card-img {
+  width: 90%;
+}
+
+.main__logo-container___3uyPh {
+  visibility: hidden;
+}
+
+@media only screen and (max-width: 768px) {
+  .flip-card {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+}
+
+/* Challenge Button Home page*/
+.intro-btn-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+.intro-btn {
+  background-color: #9cf23c;
+  color: #000000;
+  border-radius: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding: 20px;
+  font-weight: 700;
+}
+
+.intro-btn:hover {
+  background-color: #de786f;
+}
+
+/* -------------------- Mentors Page*/
+.mentor-avatar {
+  width: 200px;
+  height: 200px;
+}
+
+#mentor-section h1 {
+  font-weight: 700;
+  color: #2b1c63;
+  padding: 40px 0;
+  font-size: 46px;
+}
+
+#mentor-section h4 {
+  font-weight: 700;
+  color: #de786f;
+  font-size: 28px;
+}
+
+.profile {
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-bottom: 80px;
+  -webkit-box-shadow: 3px 3px 4px 2px #33333333;
+  box-shadow: 3px 3px 4px 2px #33333333;
+}
+
+.round2 {
+  width: 50px;
+  height: 50px;
+  background: #9cf23c;
+  border-radius: 50%;
+  float: left;
+  margin-right: -25px;
+  margin-left: 30px;
+  margin-top: 40px;
+}
+
+.round1 {
+  width: 50px;
+  height: 50px;
+  background: #9cf23c;
+  border-radius: 50%;
+  float: left;
+  margin-right: -25px;
+  margin-left: 60px;
+  margin-top: 100px;
+}
+
+/* -------------------- Form section */
+#form h2 {
+  text-align: center;
+  color: #2b1c63;
+  font-weight: 700;
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+.submit-button {
+  background-color: #9cf23c;
+  color: #000000;
+  border-radius: 20px;
+  font-weight: 700;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.submit-button:hover {
+  background-color: #de786f;
+  font-weight: 700;
+}
+
+.form-label {
+  color: #de786f;
+}
+
+.text-input:hover {
+  border-color: #57039d;
+  -webkit-box-shadow: 3px 3px 4px 2px #33333333;
+  box-shadow: 3px 3px 4px 2px #33333333;
+}
+
+/* -------------------- Resources Page*/
+
+div .col {
+  padding: 100px;
+}
+
+#resource-section h1 {
+  font-weight: 700;
+  color: #2b1c63;
+  padding: 40px 0;
+  font-size: 46px;
+}
+
+.card-learn {
+  border: none;
+  background-color: #2b1c63;
+  color: #fff;
+  border-radius: 20px;
+}
+
+.learn-card-title {
+  color: #de786f;
+  font-weight: 800;
+}
+
+.learn-card-link {
+  text-decoration: none;
+  color: #9cf23c;
+}
+
+.learn-card-link:hover {
+  text-decoration: none;
+  color: #fff;
+}
+
+.learn-more-icon {
+  padding-left: 10px;
+}
+
+.learn-card-icon {
+  padding-left: 30px;
+  padding-top: 30px;
+  font-size: 30px;
+}
+
+@media only screen and (min-width: 576px) {
+  .rolemodels-img {
+    width: 60%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .resources-intro {
+    padding-top: 60px;
+  }
+
+  #learn-img {
+    max-width: 70%;
+    float: right;
+    margin-left: 70%;
+    margin-bottom: 50px;
+  }
+
+  .subheading-resources {
+    padding-top: 80px;
+  }
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  background: #9cf23c;
+  border-radius: 50%;
+  float: right;
+  margin-right: -35px;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  float: right;
+  margin-right: -35px;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 50px solid #9cf23c;
+}
+
+/* ---------------------- Challenges page */
+#challenge-img {
+  background-image: url("../images/web-design.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: contain;
+}
+
+#challenge-section h1 {
+  font-weight: 700;
+  color: #2b1c63;
+  padding: 40px 0;
+  font-size: 46px;
+}
+
+#quiz h2 {
+  text-align: center;
+  color: #2b1c63;
+  font-weight: 700;
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+.quiz-h {
+  margin-top: 100px;
+  text-align: center;
+  color: #2b1c63;
+  font-weight: 700;
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+.challenge-p {
+  font-size: 1.25rem;
+  font-weight: 300;
+  text-align: start;
+  margin-bottom: 80px;
+}
+
+.challenge-mentor {
+  text-align: center;
+  color: #2b1c63;
+  font-weight: 700;
+  font-size: 40px;
+  margin-top: 100px;
+}
+
+.challenge-btn-mentors-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 130px;
+}
+
+.challenge-btn-mentors {
+  background-color: #9df23cfb;
+  color: #000000;
+  border-radius: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding: 20px;
+  font-weight: 700;
+}
+
+.challenge-btn-mentors:hover {
+  background-color: #de786f;
+}
+
+/* -------------------- Footer*/
+#footer {
+  background-color: #57039d;
+  padding: 60px;
+}
+
+#footer h2 {
+  padding-bottom: 20px;
+  color: white;
+  font-size: 46px;
+}
+
+.github-links li {
+  display: inline;
+  list-style: none;
+}
+
+.github-links {
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-bottom: 0;
+}
+
+.github-links a {
+  font-size: 150%;
+  padding-right: 2%;
+  padding-left: 2%;
+}
+
+.github-links img {
+  height: 50px;
+  width: 50px;
+}
+
+.text-centre {
+  text-align: center;
+}

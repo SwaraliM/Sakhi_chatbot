@@ -108,12 +108,7 @@ responses:
   utter_legal_advice:
   - text: |-
       I'm not a lawyer, but I can provide some general information.
-      Based on your description, it's important to know that the POSH Act (Prevention of Sexual Harassment) provides protections against workplace harassment. You may want to consider taking the following steps:
-
-      1. Document the incidents with dates, times, and details.
-      2. Report the harassment to your company's HR department or the designated Internal Complaints Committee (ICC).
-      3. If necessary, consult with a legal professional for guidance on further actions.
-
+      Based on your description, it's important to know that the POSH Act (Prevention of Sexual Harassment) provides protections against workplace harassment. You may want to consider taking the following steps:\n1.Document the incidents with dates, times, and details.\n2.Report the harassment to your company's HR department or the designated Internal Complaints Committee (ICC).\n3.If necessary, consult with a legal professional for guidance on further actions.
       While I can provide general information, it's advisable to consult with a legal expert for personalized legal advice regarding your harassment case. They can guide you through the legal aspects and options available to you. Remember that it's crucial to prioritize your safety and well-being.
   utter_support_services:
   - text: There are several organizations and support services available to help victims of workplace harassment. Some notable ones include [list of organizations]. These organizations offer counseling, legal aid, and emotional support.

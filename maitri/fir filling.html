@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Empower young gils to enter the coding world"
+    />
+    <meta
+      name="keywords"
+      content="Coding, Girls, Sotware development, women coders, women in technology"
+    />
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="assets/images/Sakhi.jpg" />
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0"
+      crossorigin="anonymous"
+    />
+    <!-- Fontawesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Hover.css CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css"
+      integrity="sha512-csw0Ma4oXCAgd/d4nTcpoEoz4nYvvnk21a8VA2h2dzhPAvjbUIK6V3si7/g/HehwdunqqW18RwCJKpD7rL67Xg=="
+      crossorigin="anonymous"
+    />
+    <!-- Custom CSS style sheet -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Filing of a FIR</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/c1fc3d2826.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      
+        background:#57039d;
+        color: #0f0f0f;
+      }
+      .blink {
+        animation: blinker 1.5s linear infinite;
+        color: rgb(255, 0, 174);
+        font-family: sans-serif;
+      }
+
+      @keyframes blinker {
+        50% {
+          opacity: 0;
+        }
+      }
+
+      .dropbtn {
+        /* background-color: #04aa6d; */
+        /* color: white; */
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+        text-decoration: none;
+      }
+
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        /* background-color: #f1f1f1; */
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgb(255, 254, 254);
+        z-index: 1;
+      }
+
+      .dropdown-content a {
+        /* color: rgb(255, 255, 255); */
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+
+      .dropdown-content a:hover {
+        /* background-color: #ddd; */
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      .dropdown:hover .dropbtn {
+        /* background-color: #3e8e41; */
+        text-decoration: none;
+      }
+
+      .blinking-button {
+        position: relative;
+        top: 10px; /* You can adjust the top value to change the vertical position */
+        right: -500px;
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        text-align: center;
+        text-decoration: none;
+        background-color: rgb(255, 0, 174);
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        animation: blink 1.5s infinite;
+      }
+
+      @keyframes blink {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-color navbar-expand-lg">
+
+        <div
+          class="collapse navbar-collapse nav justify-content-end"
+          id="navbarSupportedContent"
+        >
+          <ul class="nav justify-content-end">
+            <li class="nav-item navhome active">
+              <a class="nav-link" aria-current="page" href="index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item navhome">
+              <a
+                class="nav-link"
+                href="http://localhost/Complaint-Management-PHP-main/pages/landing.php"
+                >Complaint tracking System</a
+              >
+            </li>
+            <li class="nav-item navhome">
+              <a class="nav-link navhome" href="mentors.html">Events </a>
+            </li>
+            <li class="nav-item navhome">
+              <a class="nav-link navhome" href="help.html">Help </a>
+            </li>
+            <li class="nav-item navhome">
+              <!-- <a class="nav-link" href="resources.html">Resource Library</a> -->
+              <div class="dropdown">
+                <a class="dropbtn">Resources</a>
+                <!-- <button class="dropbtn">Resource Library</button> -->
+                <div class="dropdown-content">
+                  <a class="nav-link" href="resources.html"
+                    >Resource Library</a
+                  >
+
+                  <!-- <li class="nav-item navhome">
+                    <a class="nav-link navhome" href="help.html">Help </a>
+                  </li> -->
+
+                  <a class="nav-link" href="faq.html">FAQs</a>
+                  <a class="nav-link" href="fir filling.html">FIR Filing</a>
+                </div>
+              </div>
+              <link rel="stylesheet" href="index.css" />
+            </li>
+          </ul>
+        </div>
+      </div>
+     </header>
+  
+    
+    <h2>Filing of a FIR ( First Information Report )</h2>
+
+    <div class="accordian">
+      <div class="question">
+        <h4>What is an FIR?</h4>
+        <i class="icon fa-solid fa-caret-down"></i>
+      </div>
+      <div class="answer">
+        <p>
+          An FIR (First Information Report ) is registered by the police after
+          having received a complaint by a victim of a cognizable offence, i.e.
+          an offence for which police can take action without prior court
+          approval (a warrant). Section 154 of the Criminal Procedure Code, 1973
+          (‘CrPC’) defines what amounts to first information. Examples include
+          but are not limited to murder, rape, theft, insulting the modesty of
+          women and kidnapping.
+        </p>
+      </div>
+    </div>
+
+    <div class="accordian">
+      <div class="question">
+        <h4>Who can file an FIR?</h4>
+        <i class="icon fa-solid fa-caret-down"></i>
+      </div>
+      <div class="answer">
+        <p>
+          Anyone who is either a victim of a crime, or has witnessed a crime or
+          has information regarding a crime may file an FIR.
+        </p>
+      </div>
+    </div>
+
+    <div class="accordian">
+      <div class="question">
+        <h4>Where can an FIR be filed?</h4>
+        <i class="icon fa-solid fa-caret-down"></i>
+      </div>
+      <div class="answer">
+        <p>
+          An FIR must be filed at the police station closest to the location of
+          the crime. No police station can refuse filing of an FIR. Please note
+          that every police station has a jurisdictional area within which they
+          may investigate offences and crimes committed.
+        </p>
+      </div>
+    </div>
+
+    <div class="accordian">
+      <div class="question">
+        <h4>What is an zero FIR?</h4>
+        <i class="icon fa-solid fa-caret-down"></i>
+      </div>
+      <div class="answer">
+        <p>
+          A Zero FIR allows for any police station to register an FIR,
+          regardless of their jurisdictional area. It is usually used for crimes
+          such as murder and rape and other cognizable offences, i.e. an offence
+          for which police can take action without prior court approval. Initial
+          action and investigation is conducted before it is transferred to the
+          appropriate jurisdictional station as required. It is helpful for
+          crimes that require immediate response as it allows for swifter action
+          that is not bogged down by bureaucratic procedure as well as accounts
+          for whether the police station under whose jurisdiction the crime was
+          committed is not easily accessible.
+        </p>
+      </div>
+    </div>
+
+    <div class="accordian">
+      <div class="question">
+        <h4>Why should one file an FIR?</h4>
+        <i class="icon fa-solid fa-caret-down"></i>
+      </div>
+      <div class="answer">
+        <p></p>
+        An FIR is a very important document as it is one of the first steps
+        towards justice for the wronged. Police take up investigation of the
+        case only after registering the FIR in their respective police station.
+      </div>
+    </div>
+    <div class="accordian">
+      <div class="question">
+        <h4>What is the procedure to file an FIR?</h4>
+        <i class="icon fa-solid fa-caret-down"></i>
+      </div>
+      <div class="answer">
+        <p></p>
+        1. The officer must record the FIR in writing. 2. The officer must read
+        the FIR back to the person filing the FIR to ensure that all details are
+        correct. 3. The person filing the FIR must sign the FIR. 4. Once
+        recorded, signed and registered, the person filing the FIR must get a
+        copy of the FIR free of cost.
+      </div>
+    </div>
+    <div class="accordian">
+      <div class="question">
+        <h4>What about after the FIR has been filed?</h4>
+        <i class="icon fa-solid fa-caret-down"></i>
+      </div>
+      <div class="answer">
+        <p></p>
+        1. Once an FIR has been filed the police are legally obligated to start
+        investigating the case. The process of investigation includes, but is
+        not limited to, collecting evidence, questioning witnesses, inspecting
+        the crime scene, recording statements and forensic testing. If the
+        criminals are found, the police will make arrests. 2. Once the
+        investigation has been concluded the police will record all their
+        findings in a ‘Challan’ or charge sheet. If it is deemed that there is
+        enough proof on the charge sheet the case goes to court. 3. If, after
+        the investigation, the police conclude that there is not enough evidence
+        that a crime has been committed they may close the case after justifying
+        their reasons in court. If the police decide to close the case, they are
+        obligated to inform the person who filed the FIR of their decision.
+      </div>
+    </div>
+    <div class="accordian">
+      <div class="question">
+        <h4>What can you do if your FIR is not registered?</h4>
+        <i class="icon fa-solid fa-caret-down"></i>
+      </div>
+      <div class="answer">
+        <p></p>
+        1. You can meet the Superintendent of Police or other higher officers
+        like Deputy Inspector General of Police and Inspector General of Police
+        and bring your complaint to their notice. 2. You can send your complaint
+        in writing and by post to the Superintendent of Police concerned. If the
+        Superintendent of Police is satisfied with your complaint, he shall
+        either investigate the case himself or order an investigation to be
+        made. 3. You can file a private complaint before the court having
+        jurisdiction. 4. You can also make a complaint to the State Human Rights
+        Commission or the National Human Rights Commission if the police do
+        nothing to enforce the law or does it in a biased and corrupt manner.
+      </div>
+    </div>
+    <div class="accordian">
+      <div class="question">
+        <h4>Are there alternate steps available to filing an FIR?</h4>
+        <i class="icon fa-solid fa-caret-down"></i>
+      </div>
+      <div class="answer">
+        <p></p>
+        Yes, there are alternate steps to filing an FIR, for women. You can call
+        to the National Commission for Women (ideal if there is a refusal to
+        file an FIR)
+      </div>
+    </div>
+    <div class="accordian">
+      <div class="question">
+        <h4>What is the actions taken by the NCW on receipt of complaints?</h4>
+        <i class="icon fa-solid fa-caret-down"></i>
+      </div>
+      <div class="answer">
+        <p></p>
+        1. Counselling: Counselling services are provided to the aggrieved and
+        she would be told about the status of law and various options available
+        to her. 2. Resolution through alternative methods: the NCW through its
+        panel of experts would arrange for the mediation between the parties. 3.
+        In certain cases, the victim may choose to settle the matter with the
+        perpetrator of the crime. 4. If you can identify the person then the
+        person will be tracked and put in judicial custody within 24 hours
+        unless he/ she has crossed the city limits. 5. A charge sheet is filed,
+        witnesses are called and interrogated as required. The documents are
+        filed with the FIR and the sessions court takes over from there.
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

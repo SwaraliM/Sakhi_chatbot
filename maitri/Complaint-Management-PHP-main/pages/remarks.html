@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Remarks Dropdown</title>
+    <style>
+      /* Style for dropdown */
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+
+      .dropbtn {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+
+      .dropdown-content a:hover {
+        background-color: #f1f1f1;
+      }
+
+      .show {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Remarks Dropdown</h2>
+
+    <!-- Remarks dropdown -->
+    <div class="dropdown" id="dropdownRemarks">
+      <button onclick="toggleDropdown()" class="dropbtn">Select Remark</button>
+      <div id="dropdownOptions" class="dropdown-content">
+        <a href="#" onclick="selectRemark('High')">High</a>
+        <a href="#" onclick="selectRemark('Medium')">Medium</a>
+        <a href="#" onclick="selectRemark('Low')">Low</a>
+      </div>
+    </div>
+
+    <!-- Remarks input field -->
+    <label for="adminRemark">Remarks:</label>
+    <input type="text" id="adminRemark" name="adminRemark" readonly />
+
+    <!-- Include JavaScript code for dropdown behavior -->
+    <script>
+      function toggleDropdown() {
+        var dropdownOptions = document.getElementById("dropdownOptions");
+        dropdownOptions.classList.toggle("show");
+      }
+
+      function selectRemark(remark) {
+        document.getElementById("adminRemark").value = remark;
+        document.getElementById("dropdownOptions").classList.remove("show");
+        window.location.href = "complaints.php?remark=" + remark;
+      }
+
+      // Close the dropdown if the user clicks outside of it
+      window.onclick = function (event) {
+        if (!event.target.matches(".dropbtn")) {
+          var dropdowns = document.getElementsByClassName("dropdown-content");
+          for (var i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains("show")) {
+              openDropdown.classList.remove("show");
+            }
+          }
+        }
+      };
+    </script>
+  </body>
+</html>

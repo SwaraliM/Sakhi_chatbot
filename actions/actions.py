@@ -32,10 +32,12 @@ from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import SlotSet
 from actions.utils.model_methods import final_function_1
 
-import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
-from typing import Dict, Text, Any, List
+from email.mime.base import MIMEBase
+from email import encoders
+import smtplib
+from fpdf import FPDF
 
 class ActionDisplayDetails(Action):
     def name(self) -> Text:
@@ -85,6 +87,21 @@ class ActionCreateAndSendReport(Action):
     def name(self) -> Text:
         return "action_create_and_send_report"
 
+    def generate_pdf(self, report_content: str) -> str:
+        # Create PDF object
+        pdf = FPDF()
+        pdf.add_page()
+        pdf.set_font("Arial", size=12)
+
+        # Write report content to PDF
+        pdf.multi_cell(0, 10, report_content)
+
+        # Save PDF file
+        pdf_file_path = "reports/report.pdf"
+        pdf.output(pdf_file_path)
+
+        return pdf_file_path
+
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         # Retrieve filled slots
         date = tracker.get_slot("date")
@@ -93,7 +110,6 @@ class ActionCreateAndSendReport(Action):
         perpetrator_name = tracker.get_slot("perpetrator_name")
         perpetrator_relation = tracker.get_slot("perpetrator_relation")
         harassment_classification = tracker.get_slot("harassment_classification")
-        # advice = tracker.get_slot("advice")
         email = tracker.get_slot("email")  # Retrieve user's email
 
         # Generate report content
@@ -137,9 +153,12 @@ Sincerely,
 [Your Contact Information]
 """
 
+        # Generate PDF
+        pdf_file_path = self.generate_pdf(report_content)
+
         # Set up email parameters
-        sender_email = "sakhi.workplace2024@gmail.com"  # Replace with your email
-        password = "lqujxqqanfkcjcwm"  # Replace with your email password
+        sender_email = "sakhi.workplace2024@gmail.com"
+        password = "lqujxqqanfkcjcwm"
 
         # Create message object
         message = MIMEMultipart()
@@ -149,6 +168,14 @@ Sincerely,
 
         # Add report content to email body
         message.attach(MIMEText(report_content, "plain"))
+
+        # Attach PDF file
+        with open(pdf_file_path, "rb") as attachment:
+            part = MIMEBase("application", "octet-stream")
+            part.set_payload(attachment.read())
+        encoders.encode_base64(part)
+        part.add_header("Content-Disposition", f"attachment; filename=report.pdf")
+        message.attach(part)
 
         # Connect to SMTP server and send email
         with smtplib.SMTP_SSL("smtp.gmail.com", 465) as server:

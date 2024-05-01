@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Empower young gils to enter the coding world">
+    <meta name="keywords" content="Coding, Girls, Sotware development, women coders, women in technology">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="assets/images/Sakhi.jpg">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <!-- Fontawesome Icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Hover.css CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css"
+        integrity="sha512-csw0Ma4oXCAgd/d4nTcpoEoz4nYvvnk21a8VA2h2dzhPAvjbUIK6V3si7/g/HehwdunqqW18RwCJKpD7rL67Xg=="
+        crossorigin="anonymous" />
+    <!-- Custom CSS style sheet -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <title>Sakhi | A website for Womens!</title>
+
+    <style>
+        .blink {
+          animation: blinker 1.5s linear infinite;
+          color: rgb(255, 0, 174);
+          font-family: sans-serif;
+        }
+  
+        @keyframes blinker {
+          50% {
+            opacity: 0;
+          }
+        }
+  
+        .dropbtn {
+          /* background-color: #04aa6d; */
+          /* color: white; */
+          padding: 16px;
+          font-size: 16px;
+          border: none;
+          text-decoration: none;
+        }
+  
+        .dropdown {
+          position: relative;
+          display: inline-block;
+        }
+  
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          /* background-color: #f1f1f1; */
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgb(255, 254, 254);
+          z-index: 1;
+        }
+  
+        .dropdown-content a {
+          /* color: rgb(255, 255, 255); */
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+        }
+  
+        .dropdown-content a:hover {
+          /* background-color: #ddd; */
+        }
+  
+        .dropdown:hover .dropdown-content {
+          display: block;
+        }
+  
+        .dropdown:hover .dropbtn {
+          /* background-color: #3e8e41; */
+          text-decoration: none;
+        }
+  
+        .blinking-button {
+          position: relative;
+          top: 10px; /* You can adjust the top value to change the vertical position */
+          right: -500px;
+          display: inline-block;
+          padding: 10px 20px;
+          font-size: 16px;
+          text-align: center;
+          text-decoration: none;
+          background-color: rgb(255, 0, 174);
+          color: #fff;
+          border: none;
+          border-radius: 5px;
+          animation: blink 1.5s infinite;
+        }
+  
+        @keyframes blink {
+          0%,
+          100% {
+            opacity: 1;
+          }
+          50% {
+            opacity: 0;
+          }
+        }
+      </style>
+</head>
+
+<body>
+    <header>
+        <!-- Navbar -->
+        <nav class="navbar navbar-color navbar-expand-lg">
+
+            <div
+              class="collapse navbar-collapse nav justify-content-end"
+              id="navbarSupportedContent"
+            >
+              <ul class="nav justify-content-end">
+                <li class="nav-item navhome active">
+                  <a class="nav-link" aria-current="page" href="index.html"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item navhome">
+                  <a
+                    class="nav-link"
+                    href="http://localhost/Complaint-Management-PHP-main/pages/landing.php"
+                    >Complaint tracking System</a
+                  >
+                </li>
+                <li class="nav-item navhome">
+                  <a class="nav-link navhome" href="mentors.html">Events </a>
+                </li>
+                <li class="nav-item navhome">
+                  <a class="nav-link navhome" href="help.html">Help </a>
+                </li>
+                <li class="nav-item navhome">
+                  <!-- <a class="nav-link" href="resources.html">Resource Library</a> -->
+                  <div class="dropdown">
+                    <a class="dropbtn">Resources</a>
+                    <!-- <button class="dropbtn">Resource Library</button> -->
+                    <div class="dropdown-content">
+                      <a class="nav-link" href="resources.html"
+                        >Resource Library</a
+                      >
+
+                      <!-- <li class="nav-item navhome">
+                        <a class="nav-link navhome" href="help.html">Help </a>
+                      </li> -->
+
+                      <a class="nav-link" href="faq.html">FAQs</a>
+                      <a class="nav-link" href="fir filling.html">FIR Filing</a>
+                    </div>
+                  </div>
+                  <link rel="stylesheet" href="index.css" />
+                </li>
+              </ul>
+            </div>
+          </div>
+
+            <!-- <div class="container-fluid">
+                <a class="navbar-brand logo" href="index.html">Sakhi</a>
+                <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse nav justify-content-end" id="navbarSupportedContent">
+                    <ul class="nav justify-content-end">
+                        <li class="nav-item navhome">
+                            <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item navhome">
+                            <a class="nav-link" href="challenge.html">Complaint tracking System</a>
+                        </li>
+                        <li class="nav-item navhome active">
+                            <a class="nav-link" href="mentors.html">Events</a>
+                        </li>
+                        <li class="nav-item navhome ">
+                            <a class="nav-link" href="resources.html">Resources Library</a>
+                        </li>
+                    </ul>
+                </div>
+            </div> -->
+        </nav>
+    </header>
+    <section>
+        <div class="round2"></div>
+        <div class="container" id="mentor-section">
+            <div class="row justify-content-center">
+                <div class="col">
+                    <div class="row justify-content-center text-center">
+                        <h1>Events Related to Women</h1>
+                        <div class="card col-sm-12 col-md-6 col-lg-3 profile" style="width: 14rem;">
+                            <h4 class="card-title py-4">Women-In-tech</h4>
+                            <img src="assets/images/womenintech.png" class="card-img-top mentor-avatar"
+                                alt="mentor avatar">
+                            <div class="card-body">
+                                <p class="card-text">Women In Tech Dreamin' will be one of a kind Salesforce Community Conference.
+                             </p>
+                            <div class="challenge-btn-mentors-div">
+                                <a class="btn btn-lg challenge-btn-mentors hvr-pulse" href="https://www.townscript.com/e/women-in-tech-dreamin-303110" role="button">
+                                    Visit the Event
+                                </a>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="card col-sm-12 col-md-6 col-lg-3 profile" style="width: 14rem;">
+                            <h4 class="card-title py-4">Empowering-Women</h4>
+                            <img src="assets/images/we.jpg" class="card-img-top mentor-avatar" alt="mentor avatar">
+                            <div class="card-body">
+                                <p class="card-text">Programs that provide a solid foundation to nurture the inner strength, creativity and self-esteem of women from all
+                                walks of life.</p>
+                                    <div class="challenge-btn-mentors-div">
+                                        <a class="btn btn-lg challenge-btn-mentors hvr-pulse"
+                                            href="https://interfaithcommunityclinic.org/events/" role="button">
+                                            Visit the Event
+                                        </a>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="card col-sm-12 col-md-6 col-lg-3 profile" style="width: 14rem;">
+                            <h4 class="card-title py-4">Bridging Gender-divide</h4>
+                            <img src="assets/images/w1e.png" class="card-img-top mentor-avatar"
+                                alt="mentor avatar">
+                            <div class="card-body">
+                                <p class="card-text">Bridging the gender digital divide to prevent, address and respond to conflict-related sexual violence</p>
+                                    <div class="challenge-btn-mentors-div">
+                                        <a class="btn btn-lg challenge-btn-mentors hvr-pulse" href="https://www.un.org/en/observances/end-sexual-violence-in-conflict-day"
+                                            role="button">
+                                            Visit the Event
+                                        </a>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="card col-sm-12 col-md-6 col-lg-3 profile" style="width: 14rem;">
+                            <h4 class="card-title py-4">Safe Bar</h4>
+                            <img src="assets/images/w2e.png" class="card-img-top mentor-avatar" alt="mentor avatar">
+                            <div class="card-body">
+                                <p class="card-text">Safe Bar program will equip you with the tools and knowledge needed to identify and intervene safely when
+                                you see sexual harassment or assault.
+                                </p>
+                                <div class="challenge-btn-mentors-div">
+                                    <a class="btn btn-lg challenge-btn-mentors hvr-pulse"
+                                        href="https://sacenter.org/support/events.aspx" role="button">
+                                        Visit the Event
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card col-sm-12 col-md-6 col-lg-3 profile" style="width: 14rem;">
+                            <h4 class="card-title py-4">Prevention of harassment</h4>
+                            <img src="assets/images/w3e.jpg" class="card-img-top mentor-avatar"
+                                alt="mentor avatar">
+                            <div class="card-body">
+                                <p class="card-text">Program on Prevention of Sexual Harassment of women at WorkPlace</p>
+                                <div class="challenge-btn-mentors-div">
+                                    <a class="btn btn-lg challenge-btn-mentors hvr-pulse" href="https://www.nism.ac.in/event/program-on-prevention-of-sexual-harassment-at-workplace/" role="button">
+                                        Visit the Event
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="form">
+        <div class="container-fluid">
+            <div class="row justify-content-around">
+                <div class="col-2">
+                    <div class="round1"></div>
+                </div>
+                <div class="col-8">
+                    <form class="contact-form" action="https://formdump.codeinstitute.net/" method="POST"
+                        target="_blank">
+                        <h2>Any Queries!</h2>
+                        <div class="mb-3 mx-5">
+                            <label for="exampleFormControlInput1" class="form-label">First Name</label>
+                            <input name="exampleFormControlInput1" type="text" class="form-control text-input"
+                                id="exampleFormControlInput1" placeholder="First Name" required>
+                            <label for="exampleFormControlInput2" class="form-label">Last Name</label>
+                            <input name="exampleFormControlInput2" type="text" class="form-control text-input"
+                                id="exampleFormControlInput2" placeholder="Last Name" required>
+                            <label for="exampleFormControlInput3" class="form-label">Email address</label>
+                            <input name="exampleFormControlInput3" type="email" class="form-control text-input"
+                                id="exampleFormControlInput3" placeholder="name@example.com" required>
+                        </div>
+                        <div class="mb-3 mx-5">
+                            <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+                            <textarea class="form-control text-input" id="exampleFormControlTextarea1" rows="3"
+                                required></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button class="btn submit-button btn-lg" type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-2">
+                    <div class="triangle-home"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container-fluid text-center" id="footer">
+            <div class="row">
+                <div class="col">
+                    <h2>Visit us!</h2>
+                    <!-- Mentors Github links -->
+                    <ul class="github-links">
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Scripts -->
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,2 @@
+create table Admin (id int NOT NULL AUTO_INCREMENT, username varchar(15) NOT NULL, password varchar(15) NOT NULL, position varchar(20), profileURL varchar(255), PRIMARY KEY (id));
+create table complaints(id int NOT NULL AUTO_INCREMENT, name varchar(15) NOT NULL, contact varchar(12) NOT NULL, email varchar(30), title varchar(100), description varchar(255), uniqueId varchar(10), status int, remarks varchar(255), PRIMARY KEY (id));
