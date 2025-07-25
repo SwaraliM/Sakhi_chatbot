@@ -42,18 +42,6 @@ Sakhi innovates solutions to:
 6. **AI-Powered Chatbot:**
    - A conversational agent capable of answering questions, assisting in documenting incidents securely, and advising on next steps.
   
----
-
-## **Technology Stack**
-
-- **Frontend:** React.js 
-- **Backend:** Python for API development
-- **Database:** MySQL for managing incident reports
-- **AI Models:** 
-  - **Named Entity Recognition (NER):** Using BERT for extracting key entities.
-  - **Classification Algorithm:** Custom NLP pipeline with **WordNet Lemmatizer** for categorizing incidents.
-
----
 
 The complete source code for this project can be found here:
 
