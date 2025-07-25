@@ -1,17 +1,5 @@
 # **Sakhi: Empowering Women Against Sexual Harassment in Workplaces**
 
-## **Table of Contents**
-1. [Introduction](#introduction)
-2. [Problem Statement](#problem-statement)
-3. [Features](#features)
-4. [Technology Stack](#technology-stack)
-5. [Setup and Installation](#setup-and-installation)
-6. [Usage Instructions](#usage-instructions)
-7. [Future Scope](#future-scope)
-8. [Contributing](#contributing)
-9. [License](#license)
-
-
 ---
 
 ## **Introduction**
@@ -58,13 +46,12 @@ Sakhi innovates solutions to:
 
 ## **Technology Stack**
 
-- **Frontend:** React.js (or your chosen framework)
-- **Backend:** Python (Flask/Django) for API development
-- **Database:** MongoDB / PostgreSQL for securely managing incident reports
+- **Frontend:** React.js 
+- **Backend:** Python for API development
+- **Database:** MySQL for managing incident reports
 - **AI Models:** 
   - **Named Entity Recognition (NER):** Using BERT for extracting key entities.
   - **Classification Algorithm:** Custom NLP pipeline with **WordNet Lemmatizer** for categorizing incidents.
-- **Hosting:** AWS / Google Cloud Platform
 
 ---
 
