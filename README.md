@@ -41,8 +41,7 @@ Sakhi innovates solutions to:
 
 6. **AI-Powered Chatbot:**
    - A conversational agent capable of answering questions, assisting in documenting incidents securely, and advising on next steps.
-  
 
-The complete source code for this project can be found here:
 
-https://github.com/Priyanka-Kambli/Sakhi.git
+  <img src="https://github.com/VS1901/Sakhi_chatbot/blob/main/Screenshots/chatbotflow.png" alt="Flow Chart" width="450"/>
+
