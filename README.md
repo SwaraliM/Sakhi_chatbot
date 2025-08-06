@@ -41,5 +41,7 @@ Sakhi innovates solutions to:
 
 6. **AI-Powered Chatbot:**
    - A conversational agent capable of answering questions, assisting in documenting incidents securely, and advising on next steps.
-  
+
+## **Block Diagram**
+  ![App Screenshot]()
 
