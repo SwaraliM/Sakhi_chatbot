@@ -43,6 +43,3 @@ Sakhi innovates solutions to:
    - A conversational agent capable of answering questions, assisting in documenting incidents securely, and advising on next steps.
   
 
-The complete source code for this project can be found here:
-
-https://github.com/Priyanka-Kambli/Sakhi.git
